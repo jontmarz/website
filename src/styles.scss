@@ -86,7 +86,7 @@ p, li, label, blockquote {font-family: $main-font;}
 
   .logo {
     float: left;
-    background-color: $silver;
+    background-color: $dark-blue;
 
     a {
 
@@ -105,12 +105,12 @@ p, li, label, blockquote {font-family: $main-font;}
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
-    background-color: $silver;
+    background-color: $dark-blue;
 
     a {
       float: left;
       display: block;
-      color: $dark-blue;
+      color: $silver;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
@@ -129,7 +129,7 @@ p, li, label, blockquote {font-family: $main-font;}
     }
 
     a.activo {
-      color: $light-blue;
+      color: $golden;
     }
   }
 
@@ -164,7 +164,7 @@ p, li, label, blockquote {font-family: $main-font;}
       float: none;
       display: block;
       text-align: center;
-      background-color: $silver;
+      background-color: $dark-blue;
     }
   }
 
