@@ -1,0 +1,33 @@
+<div class="container bg-contacto">
+  <img src="../../../assets/img/logo-white.png" alt="" class="logo">
+  <h1 class="contactTitle">{{ title }}</h1>
+  <div class="formContact">
+    <form action="" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <div class="form-group">
+        <div class="form-item">
+          <label for="name">Nombre</label>
+          <input type="text" name="name" #name="ngModel" [(ngModel)]="contact.name" placeholder="Ingrese nombre" required pattern="[a-zA-ZÀ-ÿ ]+">
+          <div class="alert block"  *ngIf="!name.valid && name.touched">El formato de nombre no es correcto, vuelvalo a intentar</div>
+        </div>
+        <div class="form-item">
+          <label for="phone">Teléfono</label>
+          <input type="text" name="phone" #phone="ngModel" [(ngModel)]="contact.phone" placeholder="Ingrese número de teléfono" required pattern="[0-9]+">
+          <div class="alert block"  *ngIf="!phone.valid && phone.touched">El formato de teléfono no es correcto, vuelvalo a intentar</div>
+        </div>
+        <div class="form-item">
+          <label for="email">Email</label>
+          <input type="text" name="nombre" #email="ngModel" [(ngModel)]=contact.email placeholder="Ingrese una cuenta de email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+          <div class="alert block"  *ngIf="!email.valid && email.touched">El formato de Email no es correcto, vuelvalo a intentar</div>
+        </div>
+        <div class="form-item">
+          <input type="submit" class="button" name="nombre" value="Enviar"  [disabled]="contactForm.invalid" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        </div>
+      </div>
+    </form>
+    <div class="getTouch">
+      <div class="data"><a href="mailto:andrea@enalgunlugarestudio.com" class="email">andrea@enalgunlugarestudio.com</a></div>
+      <div class="data"><a href="tel:573108658880">(+57) 310 8658 880</a></div>
+      <div class="data"><a href="www.enalgunlugarestudio.com" class="web">www.enalgunlugarestudio.com</a></div>
+    </div>
+  </div>
+</div>
