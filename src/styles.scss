@@ -78,10 +78,13 @@ p, li, label, blockquote {font-family: $main-font;}
   filter: opacity(0);
   position: absolute;
   width: 100%;
+  transition: transform 500ms ease-in-out;
+
 
 
   &:hover {
     filter: opacity(1);
+    transform: translateY(1%);
   }
 
   .logo {
@@ -91,7 +94,7 @@ p, li, label, blockquote {font-family: $main-font;}
     a {
 
       img {
-        width: 17.3%;
+        width: 30%;
         margin-left: 1vw;
 
         &:hover {
@@ -501,9 +504,11 @@ p, li, label, blockquote {font-family: $main-font;}
   .getTouch {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     width: 30%;
-    padding-bottom: 12vw;
+    padding-bottom: 15vw;
+    padding-top: 3vw;
+    justify-content: space-around;
 
     .data {
       width: 40%;
@@ -526,6 +531,7 @@ p, li, label, blockquote {font-family: $main-font;}
 
       .form-group {
         padding-bottom: 6vw;
+        width: 70%;
 
         .form-item {
           display: flex;
@@ -564,12 +570,40 @@ p, li, label, blockquote {font-family: $main-font;}
             border-radius: 5px;
             border: 1px solid;
             padding: 6px;
+            width: 28%;
+            align-self: flex-end;
+
+            &:hover {
+              background-color: $silver;
+              color: #212121;
+            }
           }
         }
       }
     }
   }
+}
 
+@media only screen and (max-width: 750px) {
+  .bg-contacto {
+
+    .contactTitle {
+      font-size: 4rem;
+    }
+
+    .formContact {
+      flex-direction: column;
+
+      form {
+        width: 100%;
+      }
+
+      .getTouch {
+        align-items: center;
+        width: 100%;
+      }
+    }
+  }
 }
 // fin Contacto
 // footer
